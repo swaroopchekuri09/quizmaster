@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="check" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a3e635" />
+      <stop offset="100%" stop-color="#22c55e" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background tile -->
+  <rect width="256" height="256" rx="55" fill="url(#bg)" />
+
+  <!-- Shadow for question mark to give depth -->
+  <path d="M128,49 C90,49 60,74 60,109 L96,109 C96,91 110,79 128,79 C146,79 160,92 160,109 C160,126 145,134 132,146 C115,159 110,169 110,184 L146,184 C146,174 152,166 165,154 C182,139 196,126 196,109 C196,74 166,49 128,49 Z" fill="#312e81" opacity="0.4"/>
+  
+  <!-- Question Mark -->
+  <path d="M128,45 C90,45 60,70 60,105 L96,105 C96,87 110,75 128,75 C146,75 160,88 160,105 C160,122 145,130 132,142 C115,155 110,165 110,180 L146,180 C146,170 152,162 165,150 C182,135 196,122 196,105 C196,70 166,45 128,45 Z" fill="#ffffff" />
+  
+  <!-- Shadow for checkmark -->
+  <path d="M128, 209 l-18,-18 l-12,12 l30,30 l45,-45 l-12,-12 z" fill="#312e81" opacity="0.4"/>
+  
+  <!-- The dot is a stylized checkmark -->
+  <path d="M128, 205 l-18,-18 l-12,12 l30,30 l45,-45 l-12,-12 z" fill="url(#check)"/>
+
+  <!-- Sparkles -->
+  <path d="M45,65 L50,52 L63,47 L50,42 L45,29 L40,42 L27,47 L40,52 Z" fill="#fde047" />
+  <path d="M211,76 L214,66 L224,63 L214,60 L211,50 L208,60 L198,63 L208,66 Z" fill="#67e8f9" />
+</svg>

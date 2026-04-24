@@ -1,0 +1,459 @@
+/* =============================================
+   QuizMaster - Global CSS Styles
+   Custom styles to enhance Bootstrap 5
+=============================================== */
+
+/* ---------- CSS Variables / Design Tokens ---------- */
+:root {
+  --primary: #667eea;
+  --primary-dark: #5a67d8;
+  --secondary: #764ba2;
+  --accent: #f093fb;
+  --success: #48bb78;
+  --danger: #fc5c7d;
+  --warning: #f6d365;
+  --info: #43e97b;
+  --dark: #1a1a2e;
+  --dark-2: #16213e;
+  --dark-3: #0f3460;
+  --light-bg: #f8f9ff;
+  --card-shadow: 0 10px 40px rgba(102, 126, 234, 0.15);
+  --text-muted: #6c757d;
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-danger: linear-gradient(135deg, #fc5c7d 0%, #6a3093 100%);
+  --gradient-success: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  --gradient-warning: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+/* ---------- Base Styles ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--light-bg);
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+/* ---------- Smooth Scrolling ---------- */
+html { scroll-behavior: smooth; }
+
+/* ---------- Navbar ---------- */
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.navbar-custom {
+  background: var(--gradient-primary) !important;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+  padding: 12px 0;
+}
+
+.navbar-custom .nav-link {
+  color: rgba(255,255,255,0.85) !important;
+  font-weight: 500;
+  transition: var(--transition);
+  border-radius: 8px;
+  padding: 6px 12px !important;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #fff !important;
+  background: rgba(255,255,255,0.15);
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary-custom {
+  background: var(--gradient-primary);
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 24px;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+  color: white;
+}
+
+/* ---------- Cards ---------- */
+.card-custom {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.2);
+}
+
+.quiz-card {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: var(--transition);
+  overflow: hidden;
+  height: 100%;
+}
+
+.quiz-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(102, 126, 234, 0.25);
+}
+
+.quiz-card .card-header {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  padding: 20px;
+}
+
+/* ---------- Stats Cards ---------- */
+.stat-card {
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 24px;
+  color: white;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-card.primary  { background: var(--gradient-primary); }
+.stat-card.success  { background: var(--gradient-success); }
+.stat-card.warning  { background: var(--gradient-warning); }
+.stat-card.danger   { background: var(--gradient-danger); }
+
+.stat-card .stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.stat-card .stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+/* ---------- Hero Section ---------- */
+.hero-section {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 500px;
+}
+
+/* ---------- Badge styles ---------- */
+.topic-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: rgba(102, 126, 234, 0.12);
+  color: var(--primary-dark);
+}
+
+/* ---------- Quiz Timer ---------- */
+.timer-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+  border-bottom: 2px solid #eee;
+  padding: 12px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.timer-display {
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.timer-display.warning { color: #f6ad55; }
+.timer-display.danger  { color: #fc5c7d; animation: pulse 1s infinite; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+
+/* ---------- Question Palette ---------- */
+.q-palette-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 2px solid #dee2e6;
+  background: white;
+  font-weight: 600;
+  transition: var(--transition);
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.q-palette-btn.answered {
+  background: var(--gradient-primary);
+  color: white;
+  border-color: transparent;
+}
+
+.q-palette-btn.current {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+/* ---------- Result Page ---------- */
+.result-hero {
+  padding: 48px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.result-hero.pass { background: var(--gradient-success); }
+.result-hero.fail { background: var(--gradient-danger); }
+
+.score-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  border: 4px solid rgba(255,255,255,0.5);
+}
+
+.score-circle .score-num {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* ---------- Leaderboard Table ---------- */
+.leaderboard-table th {
+  background: var(--gradient-primary);
+  color: white;
+  font-weight: 600;
+  border: none;
+}
+
+.rank-1 { background: linear-gradient(90deg, rgba(255,215,0,0.15), transparent); }
+.rank-2 { background: linear-gradient(90deg, rgba(192,192,192,0.15), transparent); }
+.rank-3 { background: linear-gradient(90deg, rgba(205,127,50,0.15), transparent); }
+
+/* ---------- Admin Sidebar ---------- */
+.admin-sidebar {
+  background: var(--dark);
+  min-height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  padding-top: 70px;
+  transition: var(--transition);
+}
+
+.admin-sidebar .nav-link {
+  color: rgba(255,255,255,0.7);
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin: 2px 8px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.admin-sidebar .nav-link i {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.admin-content {
+  margin-left: 250px;
+  padding: 90px 30px 30px;
+  min-height: 100vh;
+}
+
+/* ---------- Form Styles ---------- */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+.auth-card {
+  max-width: 460px;
+  margin: 60px auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.15);
+  border: none;
+  overflow: hidden;
+}
+
+.auth-card .card-header {
+  background: var(--gradient-primary);
+  color: white;
+  text-align: center;
+  padding: 32px;
+  border: none;
+}
+
+/* ---------- Page Header ---------- */
+.page-header {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 40px 0;
+  margin-bottom: 40px;
+}
+
+/* ---------- Answer Review ---------- */
+.answer-item {
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-left: 4px solid transparent;
+}
+
+.answer-item.correct {
+  background: rgba(72, 187, 120, 0.1);
+  border-left-color: var(--success);
+}
+
+.answer-item.wrong {
+  background: rgba(252, 92, 125, 0.1);
+  border-left-color: var(--danger);
+}
+
+.answer-item.skipped {
+  background: rgba(246, 211, 101, 0.1);
+  border-left-color: var(--warning);
+}
+
+/* ---------- Loading ---------- */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  gap: 16px;
+}
+
+/* ---------- Footer ---------- */
+.footer-custom {
+  background: var(--dark);
+  color: rgba(255,255,255,0.8);
+  padding: 40px 0 20px;
+  margin-top: auto;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.2rem; }
+  .admin-sidebar { display: none; }
+  .admin-content { margin-left: 0; padding: 80px 16px 20px; }
+  .score-circle { width: 110px; height: 110px; }
+}
+
+/* ---------- Dark Mode Toggle ---------- */
+body.dark-mode {
+  background: var(--dark);
+  color: #e2e8f0;
+}
+
+body.dark-mode .card,
+body.dark-mode .quiz-card {
+  background: var(--dark-2);
+  color: #e2e8f0;
+}
+
+body.dark-mode .navbar-custom {
+  background: var(--dark-3) !important;
+}
+
+body.dark-mode .timer-bar {
+  background: var(--dark-2);
+  border-color: #333;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up { animation: fadeInUp 0.5s ease forwards; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+.float-anim { animation: float 3s ease-in-out infinite; }
